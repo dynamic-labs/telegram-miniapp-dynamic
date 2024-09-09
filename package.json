@@ -17,11 +17,13 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "jsonwebtoken": "^9.0.2",
     "next": "13.4.19",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
+    "telegraf": "^4.16.3",
     "typescript": "5.1.6",
     "viem": "^2.7.6"
   },
@@ -31,6 +33,7 @@
     "rpc-websockets": "7.10.0"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
     "tailwindcss": "^3.4.3"
   }
 }

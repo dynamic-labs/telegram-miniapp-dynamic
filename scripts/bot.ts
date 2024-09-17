@@ -3,8 +3,13 @@ const jwt = require("jsonwebtoken");
 const nodeCrypto = require("crypto");
 
 // Environment variables
-const TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
-const LOGIN_URL = process.env.LOGIN_URL || "";
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const LOGIN_URL = process.env.LOGIN_URL;
+
+if (!TOKEN || !LOGIN_URL || TOKEN === 'YOUR_BOT_TOKEN' || LOGIN_URL === 'YOUR_WEBSITE_URL') {
+  console.error('Please add your Telegram bot token and app URL to the .env file');
+  process.exit(1);
+}
 
 // Initialize the bot
 const bot = new Telegraf(TOKEN);

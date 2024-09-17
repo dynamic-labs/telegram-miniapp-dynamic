@@ -19,11 +19,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-    if (!dynamicEnvId || dynamicEnvId === 'YOUR_DYNAMIC_ENV_ID') {
-        const errMsg = 'Please add your Dynamic Environment to this project\'s .env file';
-        console.error(errMsg);
-        throw new Error(errMsg);
-    }
+  if (!dynamicEnvId) {
+    const errMsg =
+      "Please add your Dynamic Environment to this project's .env file";
+    console.error(errMsg);
+    throw new Error(errMsg);
+  }
   return (
     <html lang="en">
       <DynamicContextProvider

@@ -6,8 +6,10 @@ const nodeCrypto = require("crypto");
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const LOGIN_URL = process.env.LOGIN_URL;
 
-if (!TOKEN || !LOGIN_URL || TOKEN === 'YOUR_BOT_TOKEN' || LOGIN_URL === 'YOUR_WEBSITE_URL') {
-  console.error('Please add your Telegram bot token and app URL to the .env file');
+if (!TOKEN || !LOGIN_URL) {
+  console.error(
+    "Please add your Telegram bot token and app URL to the .env file"
+  );
   process.exit(1);
 }
 

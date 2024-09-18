@@ -1,6 +1,7 @@
 const { Telegraf } = require("telegraf");
 const jwt = require("jsonwebtoken");
 const nodeCrypto = require("crypto");
+require('dotenv').config();
 
 // Environment variables
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;

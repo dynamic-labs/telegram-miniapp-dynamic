@@ -43,7 +43,7 @@ export default function Main() {
             Zero clicks, one multi-chain wallet. We automatically created an embedded wallet for you.
           </p>
           <h3 className="text-xl font-semibold mb-2">How This works</h3>
-          <ul className="list-disc list-inside mb-4">
+          <ul className="list-disc list-inside mb-4 flex flex-col items-start">
             <li>We utilize the Telegram authentication token</li>
             <li>Token is verified and used to create the end user wallet</li>
             <li>The same wallet is accessible on desktop and mobile platforms</li>

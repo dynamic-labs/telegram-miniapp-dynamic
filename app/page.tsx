@@ -27,7 +27,7 @@ export default function Main() {
   }, [sdkHasLoaded]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-black" style={{backgroundColor: "#f9f9fb", backgroundImage: "url('/background-pattern.svg')", backgroundBlendMode: "overlay", backgroundSize: "auto", backgroundRepeat: "repeat"}}>
+    <div className="min-h-screen flex flex-col items-center justify-center text-black" style={{backgroundColor: "#f9f9fb", backgroundImage: "url('/background-pattern.svg')", backgroundBlendMode: "overlay", backgroundRepeat: "repeat"}}>
       <div className="flex flex-col items-center justify-center text-center max-w-3xl px-4">
         <div className="mb-6">
           <div className="inline-flex items-center justify-center">
@@ -38,11 +38,11 @@ export default function Main() {
         {isLoading ? <Spinner /> : <DynamicWidget />}
 
         <div className="bg-white p-6 rounded-lg shadow-sm mb-8 mt-8">
-          <h2 className="text-2xl font-semibold mb-4">Our Solution</h2>
+          <h2 className="text-2xl font-semibold mb-4">You got an auto-wallet!</h2>
           <p className="mb-4">
-            With our solution, setting up and accessing your multi-chain wallet has never been easier. By leveraging Telegram for secure authentication, you can instantly create and use your wallet across devices without any extra steps.
+            Zero clicks, one multi-chain wallet. We automatically created an embedded wallet for you.
           </p>
-          <h3 className="text-xl font-semibold mb-2">How We Built This</h3>
+          <h3 className="text-xl font-semibold mb-2">How This works</h3>
           <ul className="list-disc list-inside mb-4">
             <li>We utilize the Telegram authentication token</li>
             <li>Token is verified and used to create the end user wallet</li>

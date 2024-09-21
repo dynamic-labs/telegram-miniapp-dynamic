@@ -70,6 +70,7 @@ bot.start((ctx: any) => {
 
 // Launch the bot
 bot.launch();
+console.log('[DEBUG] Bot script connected...');
 
 /**
  * Function to generate HMAC hash for Telegram authentication

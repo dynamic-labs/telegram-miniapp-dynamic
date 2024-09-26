@@ -7,6 +7,8 @@ import {
   SolanaWalletConnectors,
 } from "../lib/dynamic";
 
+import { GlobalWalletExtension } from "@dynamic-labs/global-wallet";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -32,6 +34,7 @@ export default function RootLayout({
         settings={{
           environmentId: dynamicEnvId,
           walletConnectors: [EthereumWalletConnectors, SolanaWalletConnectors],
+          walletConnectorExtensions: [GlobalWalletExtension]
         }}
       >
         <body className={inter.className}>{children}</body>

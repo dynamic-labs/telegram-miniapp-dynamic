@@ -30,15 +30,32 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-      <DynamicContextProvider
-        settings={{
-          environmentId: dynamicEnvId,
-          walletConnectors: [EthereumWalletConnectors, SolanaWalletConnectors],
-          walletConnectorExtensions: [GlobalWalletExtension]
-        }}
-      >
-        <body className={inter.className}>{children}</body>
-      </DynamicContextProvider>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          async
+          src="https://telegram.org/js/telegram-widget.js?22"
+          data-telegram-login="DynamicSafeBot"
+          data-size="large"
+          data-userpic="false"
+          data-auth-url="https://c1813bfcc3ff.ngrok.app/api/v0/sdk/38db2e57-7fb8-4ebe-938b-f6556d58f3c8/telegram/signin"
+          data-request-access="write"
+        ></script>
+      </head>
+      <body className={inter.className}>
+        <DynamicContextProvider
+          settings={{
+            environmentId: dynamicEnvId,
+            walletConnectors: [
+              EthereumWalletConnectors,
+              SolanaWalletConnectors,
+            ],
+            walletConnectorExtensions: [GlobalWalletExtension],
+          }}
+        >
+          {children}
+        </DynamicContextProvider>
+      </body>
     </html>
   );
 }
